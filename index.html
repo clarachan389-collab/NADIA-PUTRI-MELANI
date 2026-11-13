@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nadia Putri Melani – Fashion Design Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{/* === FONT: ganti nama font di sini (pastikan juga ada di link Google Fonts di atas) === */--f-head:'Fraunces',Georgia,serif;--f-body:'DM Sans',system-ui,sans-serif;--f-nav:'Cormorant Garamond',Georgia,serif;--f-script:'Mrs Saint Delafield',cursive;
+/* === WARNA === */--bg:#f3eee3;--ink:#2b1a0e;--mut:#6b5a4a;--acc:#b4500c;--card:#e8dfcd;--line:#cdbfa6;--dk:#3a1b06;--bone:#efe6d2;--or:#f65c04;--oc:#c38d45;--sl:#474f61;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#241209;--ink:#efe6d2;--mut:#b9a68e;--acc:#f0883a;--card:#33190b;--line:#5a3a22}}
+:root[data-theme=dark]{--bg:#241209;--ink:#efe6d2;--mut:#b9a68e;--acc:#f0883a;--card:#33190b;--line:#5a3a22}
+html{scroll-behavior:smooth;scroll-padding-top:70px;height:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--f-body)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--f-head);line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:700;letter-spacing:-.01em;margin-bottom:1.2rem}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
+p{margin:0 0 1rem;max-width:62ch}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(36,18,9,.82);backdrop-filter:blur(10px);color:#efe6d2}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;gap:16px}
+nav b{font-family:var(--f-head);font-size:1.1rem;white-space:nowrap}
+nav div{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none}
+nav a{color:inherit;text-decoration:none;font-family:var(--f-nav);font-style:italic;font-weight:600;font-size:1.15rem;letter-spacing:.01em;white-space:nowrap;opacity:.8}
+nav a:hover,nav a:focus-visible{opacity:1;color:var(--or)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.hero{background:var(--dk);color:var(--bone);padding:120px 0 90px;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.script{font-family:var(--f-script);font-size:clamp(4rem,10vw,8rem);line-height:.9;color:var(--oc);display:block;margin-left:-.05em}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5.2rem);font-weight:700;margin:.1em 0 .3em}
+.hero p{font-size:1.15rem;color:#d8c9ae}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6rem}
+.btn{padding:13px 26px;border-radius:999px;background:var(--or);color:#1a0b02;font-weight:700;text-decoration:none}
+.btn.o{background:none;border:1.5px solid var(--oc);color:var(--bone)}
+.rust{position:relative;aspect-ratio:4/5;clip-path:polygon(6% 3%,22% 0,38% 4%,55% 1%,73% 5%,90% 1%,100% 9%,97% 27%,100% 45%,96% 63%,100% 82%,93% 100%,74% 96%,55% 100%,36% 96%,18% 100%,3% 94%,0 76%,4 58%,0 40%,3% 21%);background:center/cover;animation:rise 1.4s ease both}
+.rust img{position:absolute;left:50%;bottom:7%;width:56%;aspect-ratio:4/5;object-fit:cover;transform:translateX(-50%);border:6px solid var(--bone);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+@keyframes rise{from{opacity:0;transform:translateY(30px) rotate(-2deg)}to{opacity:1;transform:none}}
+.two{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.two img{width:100%;border-radius:4px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:1.6rem}
+.facts div{border-top:2px solid var(--acc);padding-top:10px}
+.facts b{font-family:var(--f-head);font-size:1.8rem;display:block}
+.facts span{font-size:.85rem;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.cols h3{color:var(--acc);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+ul.l{list-style:none;margin:0;padding:0}
+ul.l li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:7px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.92rem}
+.alt{background:var(--card)}
+.styl{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.styl>div{background:var(--bg);padding:28px;border-radius:4px}
+.styl .g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.styl img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.proj{background:var(--dk);color:var(--bone)}
+.proj h2{color:var(--bone)}.proj p{color:#d8c9ae}
+.proj .k{color:var(--oc)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:2rem 0}
+.pillars div{border-left:3px solid var(--or);padding-left:18px}
+.pillars h3{font-style:italic;color:var(--oc)}
+.sw{display:flex;gap:10px;flex-wrap:wrap;margin:1.5rem 0}
+.sw span{flex:1 1 110px;height:84px;border-radius:2px;padding:10px;font-weight:700;font-size:.85rem;display:flex;align-items:flex-end;clip-path:polygon(0 8%,12% 0,100% 5%,98% 100%,3% 96%)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:2rem 0}
+.gal button,.cert button{padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden;border-radius:3px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal button:hover img{transform:scale(1.05)}
+.gal .tall{aspect-ratio:3/4}.gal .wide{grid-column:span 2;aspect-ratio:16/10}
+.cap{font-size:.88rem;color:#b9a68e;margin-top:6px;font-style:italic}
+.cert{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.cert img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
+.cv{max-width:820px;margin:0 auto;background:var(--card);padding:48px;border-radius:4px;border-top:6px solid var(--acc)}
+.cv h3{color:var(--acc);margin:1.6rem 0 .5rem;font-size:1.1rem}
+.cv .row{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:6px 0}
+.cv .row b{color:var(--mut);font-weight:500}
+footer{background:var(--dk);color:var(--bone);text-align:center;padding:80px 24px 60px}
+footer .script{font-size:clamp(4rem,12vw,9rem);margin:0}
+#lb{position:fixed;inset:0;background:rgba(20,10,4,.93);display:none;align-items:center;justify-content:center;z-index:50;padding:24px;cursor:zoom-out}
+#lb.on{display:flex}#lb img{max-height:92vh;max-width:96vw;object-fit:contain}
+@media(max-width:820px){section{padding:64px 0}.hero .wrap,.two,.cols,.styl,.pillars{grid-template-columns:1fr}.hero{min-height:0}.rust{max-width:380px;margin:0 auto}.gal .wide{grid-column:auto}.cv{padding:28px 20px}.cv .row{grid-template-columns:1fr;gap:0}nav b{display:none}}
+@media(prefers-reduced-motion:reduce){.rust{animation:none}html{scroll-behavior:auto}.gal img{transition:none}}
+.js .rv{opacity:0;transform:translateY(48px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.l{transform:translateX(-70px)}.js .rv.r{transform:translateX(70px)}.js .rv.z{transform:scale(.92)}
+.js .rv.in{opacity:1;transform:none}
+nav a{position:relative;padding:4px 0}nav a::after{content:'';position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+nav a.on{opacity:1;color:var(--or)}nav a.on::after{transform:scaleX(1)}
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--or);z-index:30}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+.tabs{display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0 2rem}
+.tabs button{display:flex;align-items:center;gap:10px;font:600 1.15rem var(--f-nav);font-style:italic;padding:10px 24px 10px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:background .3s,color .3s,transform .3s,border-color .3s}
+.tabs i{width:18px;height:18px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px var(--line)}
+.tabs button:hover{border-color:var(--acc)}
+.tabs button[aria-selected=true]{background:var(--c);color:var(--tc);border-color:var(--acc);transform:translateY(-3px)}
+.pp{position:relative;overflow:hidden;display:grid;grid-template-columns:5fr 7fr;gap:48px;background:var(--pc);color:var(--pt);padding:56px;border-radius:6px}
+.pp[hidden]{display:none}
+.pp::before{content:attr(data-name);position:absolute;right:-2%;bottom:-5%;font:italic 700 clamp(6rem,18vw,15rem)/1 var(--f-head);color:transparent;-webkit-text-stroke:1.5px var(--ac);opacity:.2;pointer-events:none;white-space:nowrap}
+.pp>*{position:relative}
+.pl{align-self:start;position:sticky;top:90px}
+.tg{font:clamp(2.8rem,5vw,4rem)/1 var(--f-script);color:var(--ac);display:block;margin-bottom:6px}
+.pp h3{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-bottom:1.1rem;position:relative;padding-bottom:16px}
+.pp h3::after{content:'';position:absolute;left:0;bottom:0;width:64px;height:4px;background:var(--ac)}
+.pp p{color:inherit;opacity:.92}
+.kw{display:flex;flex-wrap:wrap;gap:8px;margin:1.2rem 0}
+.kw span{padding:6px 14px;border:1.5px solid var(--ac);border-radius:999px;font-size:.9rem}
+.sws{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.4rem}
+.sws span{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.72rem}
+.sws i{width:52px;height:52px;display:block}
+.hex i{clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%);width:58px}
+.dot i{border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.bar i{width:34px;height:64px;border-radius:17px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.mas{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.pol{flex:1 1 var(--fb,240px);max-width:100%;position:relative;padding:10px 10px 0;background:var(--bone);border:0;border-radius:2px;cursor:zoom-in;box-shadow:0 14px 34px rgba(0,0,0,.4);transform:rotate(-1.2deg);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.pol:nth-child(even){transform:rotate(1.4deg)}.pol:nth-child(3n){transform:rotate(-.4deg)}
+.pol:hover,.pol:focus-visible{transform:rotate(0) scale(1.03);z-index:2;box-shadow:0 24px 54px rgba(0,0,0,.55)}
+.pol img{width:100%;height:auto}
+.pol span{display:block;padding:10px 4px 12px;color:#3a2a1c;font:600 1rem var(--f-nav);font-style:italic;text-align:left}
+.pol::before{content:'';position:absolute;top:-10px;left:50%;width:72px;height:20px;margin-left:-36px;background:rgba(255,255,255,.4);transform:rotate(-3deg)}
+.pol:nth-child(2){--i:1}.pol:nth-child(3){--i:2}.pol:nth-child(4){--i:3}.pol:nth-child(5){--i:4}
+.js .pp:not(.go) .pol,.js .pp:not(.go) .pl{opacity:0}
+.pp.go .pol{animation:pop .85s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*130ms + 150ms)}
+.pp.go .pl{animation:sl .8s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes pop{from{opacity:0;transform:translateY(50px) scale(.92) rotate(0)}}
+@keyframes sl{from{opacity:0;transform:translateX(-40px)}}
+@media(max-width:820px){.pp{grid-template-columns:1fr;padding:28px 18px;gap:28px}.pl{position:static}.tabs button{font-size:1rem;padding:8px 18px 8px 12px}}
+@media(prefers-reduced-motion:reduce){.pp.go .pol,.pp.go .pl{animation:none}.tabs button{transition:none}}
+</style><script>
+/* ===== GANTI GAMBAR DI SINI =====
+   Cara termudah: ganti file di folder "images" dengan file baru BERNAMA SAMA (mis. portrait.jpg).
+   Atau ubah alamat gambar di bawah ini (boleh link/nama file lain).
+   Gambar yang sama otomatis berubah di semua tempat. */
+const IMG={
+  /* Foto profil (dipakai di bagian atas & Tentang) */
+  portrait:"images/portrait.jpg",
+  /* Gaya Exotic 1 */
+  style1:"images/style1.jpg",
+  /* Gaya Exotic 2 */
+  style2:"images/style2.jpg",
+  /* Gaya Casual 1 */
+  style3:"images/style3.jpg",
+  /* Gaya Casual 2 */
+  style4:"images/style4.jpg",
+  /* Moodboard: rumah tua */
+  house:"images/house.jpg",
+  /* Moodboard: karat */
+  rust1:"images/rust1.jpg",
+  /* Kain rusting dyeing */
+  dye:"images/dye.jpg",
+  /* Honeycomb modular */
+  honey:"images/honey.jpg",
+  /* Ring besi berkarat */
+  washers:"images/washers.jpg",
+  /* Ilustrasi desain */
+  illus:"images/illus.jpg",
+  /* Kolase proses */
+  process:"images/process.jpg",
+  /* Lima look di manekin */
+  lineup:"images/lineup.jpg",
+  /* Final look 1 */
+  final1:"images/final1.jpg",
+  /* Final look 2 */
+  final2:"images/final2.jpg",
+  /* Final look 3 */
+  final3:"images/final3.jpg",
+  /* Eksplorasi siluet */
+  silhouettes:"images/silhouettes.jpg",
+  /* Runway 1 */
+  runway1:"images/runway1.jpg",
+  /* Runway 2 */
+  runway2:"images/runway2.jpg",
+  /* Malang Fashion Week 2024 */
+  mfw:"images/mfw.jpg",
+  /* Sertifikat 1 */
+  cert1:"images/cert1.jpg",
+  /* Sertifikat 2 */
+  cert2:"images/cert2.jpg",
+  /* Sertifikat 3 */
+  cert3:"images/cert3.jpg",
+  /* Sertifikat 4 */
+  cert4:"images/cert4.jpg",
+  /* Sertifikat 5 */
+  cert5:"images/cert5.jpg",
+  /* Sertifikat 6 */
+  cert6:"images/cert6.jpg",
+  /* Sertifikat 7 */
+  cert7:"images/cert7.jpg",
+  /* Sertifikat 8 */
+  cert8:"images/cert8.jpg",
+  /* Adhikari: moodboard */
+  a_mood:"images/a_mood.jpg",
+  /* Adhikari: line-up drawing */
+  a_line:"images/a_line.jpg",
+  /* Adhikari: desain sajian */
+  a_sajian:"images/a_sajian.jpg",
+  /* Adhikari: photoshoot MFW 2021 */
+  a_photo:"images/a_photo.jpg",
+  /* Adhikari: dokumentasi */
+  a_doc:"images/a_doc.jpg",
+  /* Lady Rose: moodboard */
+  l_mood:"images/l_mood.jpg",
+  /* Lady Rose: final look */
+  l_final:"images/l_final.jpg",
+  /* Finger’s Story: moodboard */
+  f_mood:"images/f_mood.jpg",
+  /* Finger’s Story: final look */
+  f_final:"images/f_final.jpg",
+  /* I-Renew: katalog */
+  i_cat:"images/i_cat.jpg",
+  /* I-Renew: rompi */
+  i_hang:"images/i_hang.jpg",
+  /* Pitch Meet: moodboard */
+  p_mood:"images/p_mood.jpg",
+  /* Pitch Meet: desain */
+  p_design:"images/p_design.jpg",
+  /* Pitch Meet: final look */
+  p_final:"images/p_final.jpg",
+};
+</script>
+</head><body>
+<nav><div class="wrap"><b>Nadia Putri Melani</b><div><a href="#tentang">Tentang</a><a href="#pengalaman">Pengalaman</a><a href="#gaya">Gaya</a><a href="#proyek">Proyek</a><a href="#lainnya">Proyek lain</a><a href="#runway">Runway</a><a href="#sertifikat">Sertifikat</a><a href="#cv">CV</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div><span class="script">Fashion Design</span><h1>Nadia Putri Melani</h1>
+<p>Desainer muda yang memadukan estetika modern dengan unsur budaya lokal, lewat eksplorasi kain yang berani dan bermakna.</p>
+<div class="btns"><a class="btn" href="#proyek">Lihat koleksi</a><a class="btn o" href="#cv">Baca CV</a></div></div>
+<div class="rust" data-bg="hero"><img data-img="portrait" alt="Foto Nadia Putri Melani"></div>
+</div></header>
+
+<section id="tentang"><div class="wrap two">
+<img data-img="portrait" alt="Nadia Putri Melani berhijab krem tersenyum di taman">
+<div><h2>Panggil saja Nadia</h2>
+<p>Saya desainer muda yang dikenal lewat sentuhan kreatif dan inovatif. Berbekal pendidikan formal di bidang desain mode dan pengalaman langsung di industri, saya memadukan estetika modern dengan unsur budaya lokal.</p>
+<p>Fokus saya membuat koleksi yang bergaya sekaligus bermakna. Karya-karya saya mencerminkan kepribadian yang dinamis dan berani lewat eksplorasi kreatif bahan kain. Sejak 2019 sampai sekarang saya terlibat di berbagai program mode.</p>
+<div class="facts"><div><b>2019</b><span>mulai berkarya di dunia mode</span></div><div><b>12+</b><span>event & pengalaman profesional</span></div><div><b>2</b><span>sertifikat kompetensi nasional</span></div></div></div></div></section>
+
+<section id="pengalaman" class="alt"><div class="wrap"><h2>Pengalaman & keahlian</h2>
+<div class="cols">
+<div><h3>Event & runway</h3><ul class="l"><li>Blitar Youth Festival Forum</li><li>Malang Fashion Weeks Reborn</li><li>Jember Fashion Society</li><li>15th Anniversary Gab’s Models Agency</li><li>A Whimsical Wonderland, Gab’s Model Agency</li><li>East Java Designer Parade</li><li>Malang Fashion Weeks Invinnate</li><li>Asian Student Fashion Week</li></ul></div>
+<div><h3>Magang & freelance</h3><ul class="l"><li>Magang di desainer Andy Sugix</li><li>Magang di desainer Kiki Mahendra</li><li>Magang di Reramban Ecoprint</li><li>Freelance di Wadrobe D’cava</li><li>Pemilik brand Sena by Nadia</li></ul>
+<h3 style="margin-top:2rem">Pendidikan</h3><ul class="l"><li><b>2022–2026</b> Universitas Negeri Malang, Desain Mode</li><li><b>2019–2022</b> SMK Negeri 3 Blitar</li></ul></div>
+<div><h3>Keahlian</h3><div class="chips"><span>Desain fashion digital & manual</span><span>Pattern & sewing</span><span>Fashion concept making</span><span>Teknik beading</span><span>Konsep daur ulang</span><span>Karnaval kostum</span><span>Technical drawing</span></div>
+<h3 style="margin-top:2rem">Tools</h3><div class="chips"><span>Photoshop</span><span>Illustrator</span><span>Lightroom</span><span>Canva</span><span>Faber-Castell</span></div></div>
+</div></div></section>
+
+<section id="gaya"><div class="wrap"><h2>Personal styling</h2><div class="styl">
+<div><h3>Exotic</h3><p>Potongan unik, eksplorasi bentuk baru, motif unik, dan selalu berbeda.</p><div class="g"><img data-img="style1" alt="Referensi gaya exotic" loading="lazy"><img data-img="style2" alt="Referensi gaya exotic batik" loading="lazy"></div></div>
+<div><h3>Casual</h3><p>Basic item, nyaman, hidup minimalis, dan tenang.</p><div class="g"><img data-img="style3" alt="Referensi gaya casual" loading="lazy"><img data-img="style4" alt="Referensi gaya casual jaket" loading="lazy"></div></div>
+</div></div></section>
+
+<section id="proyek" class="proj"><div class="wrap">
+<span class="script" style="font-size:3.4rem">koleksi unggulan</span>
+<h2>Wa Biense Rasanka</h2>
+<p>Sebuah perjalanan rasa dari pertemuan tiga dunia. Karat dan cat yang mengelupas pada rumah tua diubah menjadi eksplorasi kain: kuat namun fleksibel, simbol keseimbangan antara pelapukan, keaslian alam, dan ketidaksempurnaan.</p>
+<div class="pillars"><div><h3>Wabi-sabi</h3><p>Filosofi Jepang yang merayakan indahnya ketidaksempurnaan.</p></div><div><h3>Be</h3><p>Arah menuju masa depan.</p></div><div><h3>Rasanka</h3><p>Dari bahasa Sansekerta, melambangkan kedalaman rasa.</p></div></div>
+<p>Karat jadi bahasa warna pertama, lewat teknik <i>rusting dyeing</i> pada kain katun yang menghasilkan motif abstrak yang tak pernah sama. Sarang lebah memberi keteraturan: pola heksagonal diterjemahkan jadi detail modular pada kain dan aksesori, dari tas honeycomb, topi bersiluet hexagon, sampai alas kaki kayu yang diikat tali.</p>
+<div class="sw"><span style="background:#f65c04;color:#1a0b02">#f65c04</span><span style="background:#c38d45;color:#1a0b02">#c38d45</span><span style="background:#5a2a0d">#3f1901</span><span style="background:#000">#000000</span><span style="background:#a7acb3;color:#1a0b02">#a7acb3</span><span style="background:#474f61">#474f61</span><span style="background:#dfd8c6;color:#1a0b02">#dfd8c6</span></div>
+<h3 class="k">Moodboard & eksplorasi kain</h3>
+<div class="gal"><button class="tall"><img data-img="house" alt="Rumah tua dengan cat mengelupas" loading="lazy"></button><button class="tall"><img data-img="rust1" alt="Tekstur karat" loading="lazy"></button><button class="tall"><img data-img="dye" alt="Kain hasil rusting dyeing" loading="lazy"></button><button class="tall"><img data-img="honey" alt="Dekonstruksi modular honeycomb" loading="lazy"></button><button class="tall"><img data-img="washers" alt="Ring besi berkarat untuk pewarnaan" loading="lazy"></button></div>
+<h3 class="k">Dari sketsa ke produksi</h3>
+<div class="gal"><button class="tall"><img data-img="illus" alt="Ilustrasi desain koleksi" loading="lazy"></button><button class="wide"><img data-img="process" alt="Proses pola, pewarnaan, dan menjahit" loading="lazy"></button><button class="wide"><img data-img="lineup" alt="Lima look koleksi di manekin" loading="lazy"></button></div>
+<h3 class="k">Final look</h3>
+<div class="gal"><button class="tall"><img data-img="final1" alt="Final look dengan topi dan tulle" loading="lazy"></button><button class="tall"><img data-img="final2" alt="Final look outer layer karat" loading="lazy"></button><button class="tall"><img data-img="final3" alt="Final look tampak belakang" loading="lazy"></button></div>
+<p class="cap">Koleksi dipublikasikan di Asian Student Fashion Week, Mei 2026.</p>
+<h3 class="k" style="margin-top:2.5rem">Eksplorasi siluet</h3>
+<div class="gal"><button class="wide" style="grid-column:1/-1;aspect-ratio:auto;background:#f3eee3"><img data-img="silhouettes" alt="Lima eksplorasi siluet kolase" loading="lazy" style="object-fit:contain"></button></div>
+</div></section>
+
+<section id="lainnya" class="alt"><div class="wrap"><span class="script" style="font-size:3.4rem;color:var(--acc)">lebih banyak karya</span><h2>Proyek lainnya</h2><div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="adhikari" style="--c:#1c1428;--tc:#efe6d2"><i></i>Adhikari</button><button role="tab" aria-selected="false" data-t="lady" style="--c:#741229;--tc:#f9e3d0"><i></i>Lady Rose</button><button role="tab" aria-selected="false" data-t="finger" style="--c:#55742a;--tc:#f6f3df"><i></i>Finger’s Story</button><button role="tab" aria-selected="false" data-t="irenew" style="--c:#2a2523;--tc:#efe6d2"><i></i>I-Renew</button><button role="tab" aria-selected="false" data-t="pitch" style="--c:#1a216b;--tc:#efe6d2"><i></i>Pitch Meet</button></div><div class="pp" role="tabpanel" id="pp-adhikari" data-name="Adhikari" style="--pc:#1c1428;--pt:#efe6d2;--ac:#5b9bff"><div class="pl"><span class="tg">semangat</span><h3>Adhikari</h3><p>Adhikari berarti “semangat”: dorongan yang tumbuh dari dalam diri, memberi jeda pada diri sendiri tanpa meninggalkan citra di lingkungan sosialnya. Biru menjadi sorotan sebagai simbol percaya diri, sementara hitam, ungu gelap, dan cokelat menyeimbangkannya.</p><div class="kw"><span>Percaya diri</span><span>Tegas</span><span>Bebas</span></div><div class="sws hex"><span><i style="background:#d9d9d9" title="#d9d9d9"></i>#d9d9d9</span><span><i style="background:#004aad" title="#004aad"></i>#004aad</span><span><i style="background:#ffffff" title="#ffffff"></i>#ffffff</span><span><i style="background:#5d4b65" title="#5d4b65"></i>#5d4b65</span><span><i style="background:#000000" title="#000000"></i>#000000</span><span><i style="background:#7c5448" title="#7c5448"></i>#7c5448</span></div></div><div class="mas"><button class="pol" style="--fb:230px"><img data-img="a_mood" alt="Moodboard, Adhikari" loading="lazy"><span>Moodboard</span></button><button class="pol" style="--fb:230px"><img data-img="a_line" alt="Line-up drawing, Adhikari" loading="lazy"><span>Line-up drawing</span></button><button class="pol" style="--fb:230px"><img data-img="a_sajian" alt="Desain sajian, Adhikari" loading="lazy"><span>Desain sajian</span></button><button class="pol" style="--fb:230px"><img data-img="a_photo" alt="Photoshoot MFW Reborn 2021, Adhikari" loading="lazy"><span>Photoshoot MFW Reborn 2021</span></button><button class="pol" style="--fb:300px"><img data-img="a_doc" alt="Dokumentasi proses, Adhikari" loading="lazy"><span>Dokumentasi proses</span></button></div></div><div class="pp" role="tabpanel" id="pp-lady" data-name="Lady Rose" style="--pc:#741229;--pt:#f9e3d0;--ac:#ffb4a2" hidden><div class="pl"><span class="tg">mawar & cadar</span><h3>Lady Rose</h3><p>Moodboard bermain di antara mawar merah, topi klasik bertepi lebar, dan ilustrasi siluet bergaya vintage. Hasil akhirnya kemeja merah bersulam mawar, rok hitam panjang, dan topi dengan cadar tipis.</p><div class="kw"><span>Mawar</span><span>Vintage</span><span>Cadar tipis</span></div></div><div class="mas"><button class="pol" style="--fb:100%"><img data-img="l_mood" alt="Moodboard, Lady Rose" loading="lazy"><span>Moodboard</span></button><button class="pol" style="--fb:100%"><img data-img="l_final" alt="Tiga tampilan akhir, Lady Rose" loading="lazy"><span>Tiga tampilan akhir</span></button></div></div><div class="pp" role="tabpanel" id="pp-finger" data-name="Finger’s Story" style="--pc:#55742a;--pt:#f6f3df;--ac:#e4e640" hidden><div class="pl"><span class="tg">okra & batik</span><h3>Finger’s Story</h3><p>Moodboard berisi motif bunga, penampang okra, dan batik dalam palet hijau, kuning, serta merah marun. Ilustrasi diwujudkan menjadi look berlapis dengan rompi hijau limau, celana batik, dan baret.</p><div class="kw"><span>Okra</span><span>Batik</span><span>Layering</span></div><div class="sws dot"><span><i style="background:#fffff5" title="#fffff5"></i>#fffff5</span><span><i style="background:#a1c2a7" title="#a1c2a7"></i>#a1c2a7</span><span><i style="background:#a59540" title="#a59540"></i>#a59540</span><span><i style="background:#d4d532" title="#d4d532"></i>#d4d532</span><span><i style="background:#cc3b38" title="#cc3b38"></i>#cc3b38</span><span><i style="background:#774e54" title="#774e54"></i>#774e54</span></div></div><div class="mas"><button class="pol" style="--fb:280px"><img data-img="f_mood" alt="Moodboard, Finger’s Story" loading="lazy"><span>Moodboard</span></button><button class="pol" style="--fb:400px"><img data-img="f_final" alt="Manekin, ilustrasi, dan model, Finger’s Story" loading="lazy"><span>Manekin, ilustrasi, dan model</span></button></div></div><div class="pp" role="tabpanel" id="pp-irenew" data-name="I-Renew" style="--pc:#2a2523;--pt:#efe6d2;--ac:#f4a6d7" hidden><div class="pl"><span class="tg">denim reborn</span><h3>I-Renew</h3><p>Mini katalog dengan dua seri, Mince Amour dan Lance Amour. Material denim diolah ulang menjadi rompi korset dengan manipulasi kain dan tali pita merah muda.</p><div class="kw"><span>Denim</span><span>Upcycle</span><span>Korset</span></div></div><div class="mas"><button class="pol" style="--fb:200px"><img data-img="i_cat" alt="Mini katalog, I-Renew" loading="lazy"><span>Mini katalog</span></button><button class="pol" style="--fb:420px"><img data-img="i_hang" alt="Rompi korset, I-Renew" loading="lazy"><span>Rompi korset</span></button></div></div><div class="pp" role="tabpanel" id="pp-pitch" data-name="Pitch Meet" style="--pc:#1a216b;--pt:#efe6d2;--ac:#ff7f8c" hidden><div class="pl"><span class="tg">upcycle project</span><h3>Pitch Meet</h3><p>Upcycle project bertema mercusuar, kota modern, dan dunia balap. Palet biru malam, abu kebiruan, krem, merah, dan hitam diterjemahkan menjadi jaket berkerudung dengan panel merah serta layer abu-abu.</p><div class="kw"><span>Mercusuar</span><span>Balap</span><span>Upcycle</span></div><div class="sws bar"><span><i style="background:#1a216b" title="#1a216b"></i>#1a216b</span><span><i style="background:#7f83a2" title="#7f83a2"></i>#7f83a2</span><span><i style="background:#e4dbcf" title="#e4dbcf"></i>#e4dbcf</span><span><i style="background:#8e1d29" title="#8e1d29"></i>#8e1d29</span><span><i style="background:#0b0b0f" title="#0b0b0f"></i>#0b0b0f</span></div></div><div class="mas"><button class="pol" style="--fb:280px"><img data-img="p_mood" alt="Moodboard, Pitch Meet" loading="lazy"><span>Moodboard</span></button><button class="pol" style="--fb:240px"><img data-img="p_design" alt="Desain depan & belakang, Pitch Meet" loading="lazy"><span>Desain depan & belakang</span></button><button class="pol" style="--fb:100%"><img data-img="p_final" alt="Final look, Pitch Meet" loading="lazy"><span>Final look</span></button></div></div></div></section>
+
+<section id="runway"><div class="wrap"><h2>Pengalaman fashion show</h2>
+<p>Malang Fashion Week 2021 dan 2024, serta Surabaya Fashion Designer Parade 2024.</p>
+<div class="gal" style="color:#fff"><button class="wide"><img data-img="runway1" alt="Tim SMKN 3 Blitar di Malang Fashion Week 2021" loading="lazy"></button><button class="wide"><img data-img="runway2" alt="Penampilan di East Java Fashion Designer Parade" loading="lazy"></button><button class="tall"><img data-img="mfw" alt="Model membawakan karya Nadia di Malang Fashion Week 2024" loading="lazy"></button></div></div></section>
+
+<section id="sertifikat" class="alt"><div class="wrap"><h2>Sertifikat & penghargaan</h2>
+<p>Termasuk sertifikat kompetensi BNSP sebagai Desainer Busana Berbasis Stylist dan KKNI Level II Tata Busana.</p>
+<div class="cert"><button><img data-img="cert1" alt="Sertifikat kompetensi BNSP Fashion Design 2024" loading="lazy"></button><button><img data-img="cert2" alt="Sertifikat kompetensi KKNI Tata Busana 2022" loading="lazy"></button><button><img data-img="cert3" alt="Sertifikat Gab’s Model Agency 15th Anniversary" loading="lazy"></button><button><img data-img="cert4" alt="Sertifikat designer Malang Fashion Week 2021" loading="lazy"></button><button><img data-img="cert5" alt="Piagam East Java Fashion Designer Parade 2024" loading="lazy"></button><button><img data-img="cert6" alt="Sertifikat Desmod Vaganza 2024" loading="lazy"></button><button><img data-img="cert7" alt="Sertifikat panitia Asian Student Fashion Week 2025" loading="lazy"></button><button><img data-img="cert8" alt="Sertifikat webinar Fashion Design Unesa 2021" loading="lazy"></button></div></div></section>
+
+<section id="cv"><div class="wrap"><h2 style="text-align:center">Curriculum vitae</h2>
+<div class="cv"><h2 style="font-size:2.2rem;margin:0">Nadia Putri Melani</h2><p style="color:var(--mut);margin:0">Fashion Designer · Mahasiswa Desain Mode, Universitas Negeri Malang</p>
+<h3>Profil</h3><p>Desainer muda dengan pendidikan formal desain mode dan pengalaman industri sejak 2019. Memadukan estetika modern dengan unsur budaya lokal lewat eksplorasi kain.</p>
+<h3>Pendidikan</h3><div class="row"><b>2022–2026</b><span>Universitas Negeri Malang, Desain Mode</span></div><div class="row"><b>2019–2022</b><span>SMK Negeri 3 Blitar</span></div>
+<h3>Pengalaman</h3><div class="row"><b>Magang</b><span>Desainer Andy Sugix, desainer Kiki Mahendra, Reramban Ecoprint</span></div><div class="row"><b>Freelance</b><span>Wadrobe D’cava</span></div><div class="row"><b>Brand</b><span>Sena by Nadia</span></div><div class="row"><b>Fashion show</b><span>Malang Fashion Week 2021 & 2024, East Java Designer Parade 2024, Jember Fashion Society, Asian Student Fashion Week, Blitar Youth Festival Forum</span></div>
+<h3>Keahlian</h3><p>Desain fashion digital & manual, pattern & sewing, fashion concept making, beading, konsep daur ulang, karnaval kostum, technical drawing.</p>
+<h3>Tools</h3><p>Photoshop, Illustrator, Lightroom, Canva.</p>
+<h3>Sertifikasi</h3><div class="row"><b>2024</b><span>BNSP: Desainer Busana Berbasis Stylist</span></div><div class="row"><b>2022</b><span>KKNI Level II, Tata Busana</span></div></div></div></section>
+
+<footer><span class="script">thank you</span><p style="margin:0 auto;color:#d8c9ae">Terbuka untuk kolaborasi, proyek freelance, dan kesempatan magang.</p></footer>
+<div id="lb" role="dialog" aria-label="Gambar diperbesar"><img alt=""></div>
+<script>
+document.querySelectorAll('[data-img]').forEach(e=>e.src=IMG[e.dataset.img]);document.querySelectorAll('[data-bg]').forEach(e=>e.style.backgroundImage='url('+IMG[e.dataset.bg]+')');
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.gal button,.cert button,.pol').forEach(b=>b.onclick=()=>{const i=b.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!rm&&'IntersectionObserver' in window){
+document.documentElement.classList.add('js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('section .wrap>h2,section .wrap>h3,section .wrap>p,section .wrap>.script,.two>*,.cols>div,.pillars>div,.facts>div,.styl>div,.gal button,.cert button,.sw,.cv,.btns,footer>*').forEach(el=>{
+el.classList.add('rv');
+const sib=[...el.parentElement.children].indexOf(el);
+if(el.parentElement.classList.contains('two'))el.classList.add(sib?'r':'l');
+else if(el.matches('.gal button,.cert button'))el.classList.add('z');
+el.style.transitionDelay=Math.min(sib*110,550)+'ms';
+io.observe(el)});}
+const pg=document.createElement('div');pg.id='pg';document.body.appendChild(pg);
+addEventListener('scroll',()=>{pg.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+const links=[...document.querySelectorAll('nav a')];
+if('IntersectionObserver' in window){const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});document.querySelectorAll('section[id]').forEach(s=>so.observe(s));}
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+const pps=[...document.querySelectorAll('.pp')];
+const go=p=>{p.classList.remove('go');void p.offsetWidth;p.classList.add('go')};
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));pps.forEach(p=>p.hidden=p.id!=='pp-'+b.dataset.t);go(document.getElementById('pp-'+b.dataset.t))});
+if('IntersectionObserver' in window){const po=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.hidden){e.target.classList.add('go');po.unobserve(e.target)}}),{threshold:.15});pps.forEach(p=>po.observe(p))}else pps.forEach(p=>p.classList.add('go'));
+</script></body></html>
